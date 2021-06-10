@@ -1,9 +1,10 @@
 /**
  * RunAssingment.java
- * 
+ * This Applications is my Assignment3
  * @author Tshegofatso Molefe
  * 10 June 2021
  */
+
 package za.ac.cput.assignment_3;
 
 
@@ -31,7 +32,7 @@ public class RunAssignment
     ArrayList<Customer> customer= new ArrayList<Customer>();
     ArrayList<Supplier> supplier= new ArrayList<Supplier>();
 
-    
+ //2a &b)   
     public void openFile()
     {
         try
@@ -86,7 +87,7 @@ public class RunAssignment
     }
 
 
-    public void readCloseFile()
+    public void CloseFile()
     {
         try
 	{
@@ -99,33 +100,33 @@ public class RunAssignment
         }
     }
     
-
+//2b)
     public void sortCustomer()
     {
-        String[] sortID = new String[customer.size()];
-        ArrayList<Customer> sortA= new ArrayList<Customer>();
+        String[] sort = new String[customer.size()];
+        ArrayList<Customer> sortCus= new ArrayList<Customer>();
         int count = customer.size();
         for (int i = 0; i < count; i++) 
 	{
-            sortID[i] = customer.get(i).getStHolderId();
+            sort[i] = customer.get(i).getStHolderId();
         }
-        Arrays.sort(sortID);
+        Arrays.sort(sort);
         
         for (int i = 0; i < count; i++) 
 	{
             for (int j = 0; j < count; j++) 
             {
-                if (sortID[i].equals(customer.get(j).getStHolderId()))
+                if (sort[i].equals(customer.get(j).getStHolderId()))
                 {
-                    sortA.add(customer.get(j));
+                    sortCus.add(customer.get(j));
                 }
             }
         }
         customer.clear();
-        customer = sortA;
+        customer = sortCus;
     }
 
-
+//2c)
     public int getAge(String dob)
     {
         String[] seperation = dob.split("-");
@@ -137,7 +138,7 @@ public class RunAssignment
         return age;
     }
 
-
+//2d)
     public String formatDob(String dob)
     {
         DateTimeFormatter changeFormat = DateTimeFormatter.ofPattern("dd MMM yyyy");       
@@ -146,6 +147,7 @@ public class RunAssignment
         return formatted;
     }
     
+//2e)
     public void showCustomersText()
     {
         try
@@ -178,7 +180,7 @@ public class RunAssignment
         }
     }
 
-    
+ //2f)   
     public String rent()
     {
         int count = customer.size();
@@ -197,34 +199,36 @@ public class RunAssignment
         String line =String.format("Number of customers who can rent : %4s\nNumber of customers who cannot rent : %s\n", canRent, notRent);
         return line;
     }
+	
+	
 
-    
+//3a)    
     public void sortSuppliers()
     {
-        String[] sortID = new String[supplier.size()];
-        ArrayList<Supplier> sortA= new ArrayList<Supplier>();
+        String[] sort = new String[supplier.size()];
+        ArrayList<Supplier> sortSup= new ArrayList<Supplier>();
         int count = supplier.size();
         for (int i = 0; i < count; i++) 
 	{
-            sortID[i] = supplier.get(i).getName();
+            sort[i] = supplier.get(i).getName();
         }
-        Arrays.sort(sortID);
+        Arrays.sort(sort);
         
         for (int i = 0; i < count; i++) 
 	{
             for (int j = 0; j < count; j++) 
 		{
-                if (sortID[i].equals(supplier.get(j).getName()))
+                if (sort[i].equals(supplier.get(j).getName()))
 		{
-                    sortA.add(supplier.get(j));
+                    sortSup.add(supplier.get(j));
                 }
             }
         }
         supplier.clear();
-        supplier = sortA;
+        supplier = sortSup;
     }
 
-
+//3b)
     public void showSupplierText()
     {
         try
@@ -260,7 +264,7 @@ public class RunAssignment
         RunAssignment obj = new RunAssignment ();
         obj.openFile();
         obj.readFile();
-        obj.readCloseFile();
+        obj.CloseFile();
         obj.sortCustomer();
         obj.sortSuppliers();
         obj.showCustomersText();
