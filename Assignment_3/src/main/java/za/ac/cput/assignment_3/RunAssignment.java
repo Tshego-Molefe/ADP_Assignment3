@@ -1,7 +1,7 @@
 /**
  * RunAssingment.java
  * This Applications is my Assignment3
- * @author Tshegofatso Molefe
+ * @author Tshegofatso Molefe {219001235}
  * 10 June 2021
  */
 
