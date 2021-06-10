@@ -1,0 +1,12 @@
+===========================================Customers================================================================= 
+ID              Name            Surname         Address         Date of Birth   Age                      Credit CanRent        
+===================================================================================================================== 
+C100            Mike            Rohsopht        Bellville       24 Jan 1993    
+C130            Stu             Padassol        Sea Point       18 May 1987    
+C150            Luke            Atmyass         Bellville       27 Jan 1981    
+C250            Eileen          Sideways        Nyanga          27 Nov 1999    
+C260            Ima             Stewpidas       Atlantis        27 Jan 2001    
+C300            Ivana.B         Withew          Langa           16 Jul 1998    
+ 
+Number of customers who can rent :    4
+Number of customers who cannot rent : 2
